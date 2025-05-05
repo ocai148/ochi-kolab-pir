@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 88px;
+    background-color: rgb(204, 228, 255);
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    color: rgb(134, 117, 39);
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    padding-right: 30px;
+    color: rgb(134, 117, 39);
+    float: right;
+}
+
+#menu-toggle:checked+label+#nav-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-menu {
+    display: none;
+}
+
+nav {
+    flex-direction: column;
+    background-color: bisque;
+    position: absolute;
+    top: 20px;
+    right: 1px;
+    width: 150px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+nav a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgb(204, 204, 104);
+    text-decoration: none;
+    color: rgb(179, 142, 94);
+    font-size: 20px;
+}
+
+
+nav a:hover {
+    background-color: rgb(161, 126, 51);
+    color: rgb(250, 221, 177);
+    transition: 0.4s;
+    border-radius: 8px;
+}
+
+
+section.home {
+    background: url("rumah.png");
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    height: 800px;
+    animation: movebg 15s linear infinite;
+}
+
+@keyframes movebg {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+section.home div {
+    text-align: center;
+    color: beige;
+    margin: auto;
+    width: 70%;
+    padding: 20px;
+    font-size: 30px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+section.home .foto {
+    animation: goyang 4s infinite;
+}
+
+@keyframes goyang{
+    0%{transform: rotate(0deg);}
+	25%{transform:rotate(8deg);}
+    50%{transform:rotate(-8deg);}
+    75%{transform:rotate(1deg);}
+    100%{transform:rotate(deg);}
+}
+
+section.home a {
+    color: rgb(255, 255, 247);
+    padding: 10px 20px;
+    text-decoration: none;
+    text-shadow: 0px 0px 3px black;
+    font-weight: bold;
+    font-size: large;
+    border-width: 5px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
+    border-color: brown;
+}
+
+
+section.about {
+    background-color: rgb(156, 51, 51);
+    height: 650px;
+}
+
+section.about h2 {
+    text-align: center;
+    float: center;
+    font-weight: bold;
+    color: rgb(192, 218, 252);
+}
+
+section.about p {
+    text-align: center;
+    float: right;
+    color: bisque;
+    margin-right: 60px;
+    margin-left: 60px;
+}   
+
+section.about img {
+    height: 400px;
+    margin-left: 600px;
+    padding-top: 30px;
+}
+
+section.product {
+    background: url("tentang.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 80px 0;
+}
+
+.product .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px;
+}
+
+.product .card {
+    background-color: beige;
+    color: brown;
+    text-align: center;
+    box-shadow: 0px 0px 4px;
+    border-radius: 20px;
+    padding: 20px;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product .card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product .card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product .card a {
+    background-color: brown;
+    color: rgb(250, 250, 184);
+    padding: 8px 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px;
+    text-decoration: none;
+}
+
+.product .card a:hover {
+    background-color: rgb(158, 222, 241);
+} 
+
+section.contact {
+    background-color: rgb(240, 183, 108);
+    padding: 55px 0;
+}
+
+section.contact .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.contact .card {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: url("contact.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(158, 20, 20);
+    text-align: center;
+    padding: 30px 30px 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    width: 1200px;
+
+}
+
+
+footer {
+    background-color: rgb(107, 107, 107);
+    padding: 20px 0;
+}
+
+footer .medsos {
+    text-align: center;
+}
+
+footer .medsos a {
+    color: beige;
+    font-size: 20px;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+footer .medsos a:hover {
+    transition: 0.4s;
+    color: brown;
+}
